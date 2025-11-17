@@ -4,18 +4,19 @@
 	<meta name="viewport" content="width=device-width" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="robots" content="noindex,nofollow" />
-	<title>WordPress &#8250; ReadMe</title>
 	<link rel="stylesheet" href="wp-admin/css/install.css?ver=20100228" type="text/css" />
 </head>
 <body>
 <h1 id="logo">
 	<a href="https://wordpress.org/"><img alt="WordPress" src="wp-admin/images/wordpress-logo.png" /></a>
 </h1>
-<p style="text-align: center">Semantic Personal Publishing Platform</p>
+	
+## User Manual
 
-<h2>user manual</h2>
-<p style="color: red">The code is written in the theme twenty twenty five</p>
-<p style="text-align: right">&#8212; Matt Mullenweg</p>
+**The code is written in the theme Twenty Twenty-Five**
+
+
+
 
 <h2>First Things First</h2>
 <p>Welcome. WordPress is a very special project to me. Every developer and contributor adds something unique to the mix, and together we create something beautiful that I am proud to be a part of. Thousands of hours have gone into WordPress, and we are dedicated to making it better every day. Thank you for making it part of your world.</p>
