@@ -1,0 +1,74 @@
+/* vehicle search and filter */
+.vehicle-filter {
+    display: flex;
+    gap: 10px; 
+    margin-bottom: 25px;
+    max-width: 500px;
+}
+
+.vehicle-filter .text-search { 
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.vehicle-filter .text-search:focus {
+    border-color: #0073aa;
+    box-shadow: 0 0 5px rgba(0, 115, 170, 0.3);
+    outline: none;
+}
+
+.vehicle-filter button {
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.vehicle-filter button:hover {
+    background-color: #005177;
+}
+
+
+
+/* vehicle list */
+.vehicle-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.vehicle-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.vehicle-item .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-vehicle {
+    max-width: 350px;
+    max-height: 150px;
+}
+
+/* pagination */
+.pagination-list-vehicle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-list-vehicle a {
+    margin: 10px;
+}

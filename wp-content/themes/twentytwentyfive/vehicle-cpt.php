@@ -75,9 +75,10 @@ function register_vehicle_tax()
             'show_in_rest'  => true,
         )
     );
+
 }
 add_action('init', 'register_vehicle_tax');
-
+    
 /* 
 *   custom fields
 */
