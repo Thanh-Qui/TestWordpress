@@ -4,15 +4,15 @@
 *   custom fields
 */
 // add new fields for specific posts
-// add_meta_boxes -> dùng để tạo giao diện nhập dữ liệu
+// add_meta_boxes -> create interface form
 function vehicle_add_meta()
 {
     add_meta_box(
-        // id của vehicle cụ thể
+        // id vehicle --> meta box ID
         'vehicle_info',
-        // tên hiển thị của vehicle đó
+        // display infomation vehicle
         'Vehicle Info',
-        // tạo hàm nơi nhập dữ liệu vehicel
+        // create func dipslay data
         'vehicle_meta_box_html',
         'vehicle'
     );
@@ -20,9 +20,10 @@ function vehicle_add_meta()
 add_action('add_meta_boxes', 'vehicle_add_meta');
 
 // render meta box
-// get_post_meta -> dùng để lấy dữ liệu đã lưu trong post meta
+// get_post_meta -> use to saved data
 function vehicle_meta_box_html($post)
 {
+    // load data to wp_postmeta table
     $model = get_post_meta($post->ID, '_vehicle_model', true);
     $year = get_post_meta($post->ID, '_vehicle_year', true);
     $badge = get_post_meta($post->ID, '_vehicle_badge', true);
@@ -32,6 +33,7 @@ function vehicle_meta_box_html($post)
     $image_id = get_post_meta($post->ID, '_vehicle_image', true);
     $image_url = $image_id ? wp_get_attachment_url($image_id) : '';
 
+    // create nonce (temporary security code) to security fake request
     wp_nonce_field('vehicle_save_meta', 'vehicle_meta_nonce');
 
 ?>
@@ -71,18 +73,20 @@ function vehicle_meta_box_html($post)
 <?php
 }
 
-// thêm enctype vào form
+// add enctype to form to save file
 function vehicle_post_edit_form_tag()
 {
     echo ' enctype="multipart/form-data"';
 }
+// hook (post_edit_form_tag) add HTML attributes
 add_action('post_edit_form_tag', 'vehicle_post_edit_form_tag');
 
 
 // save meta
-// update_post_meta -> dùng để lưu hoặc cập nhập lại dữ liệu
+// update_post_meta -> save and update data
 function vehicle_save_meta($post_id)
 {
+    // create array to save meta box
     $fields = [
         'vehicle_model' => '_vehicle_model',
         'vehicle_year' => '_vehicle_year',
@@ -94,12 +98,14 @@ function vehicle_save_meta($post_id)
 
     foreach ($fields as $name => $meta_key) {
         if (isset($_POST[$name])) {
+            // save and update meta box for wp_postmeta (update_post_meta)
+            // clean data input (sanitize_text_field)
             update_post_meta($post_id, $meta_key, sanitize_text_field($_POST[$name]));
         }
     }
 
 
-    // Lưu image
+    // save image
     if (!function_exists('media_handle_upload')) {
         require_once(ABSPATH . 'wp-admin/includes/image.php');
         require_once(ABSPATH . 'wp-admin/includes/file.php');
@@ -107,7 +113,9 @@ function vehicle_save_meta($post_id)
     }
 
     if (isset($_FILES['vehicle_image']) && !empty($_FILES['vehicle_image']['name'])) {
+        // Process uploaded files, save to Media Library, return attachment ID --> media_handle_upload
         $attachment_id = media_handle_upload('vehicle_image', $post_id);
+        // check object
         if (!is_wp_error($attachment_id)) {
             update_post_meta($post_id, '_vehicle_image', $attachment_id);
         }

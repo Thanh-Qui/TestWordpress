@@ -3,31 +3,37 @@
 /* 
 *   taxonomy
 */
+
+// register 2 taxonomy for cpt of vehicle is brand and series
 function register_vehicle_tax()
 {
 
     // create brand
     $brand_labels = array(
-        'name'          => __('Brands', 'twentytwentyfive'),
-        'singular_name' => __('Brand', 'twentytwentyfive'),
+        // dipslay name menu
+        'name'          => __('Brands', 'bluehost-blueprint'),
+        'singular_name' => __('Brand', 'bluehost-blueprint'),
     );
 
     register_taxonomy(
+        // slug private of taxonomy
         'vehicle_brand',
+        // use for vehicle cpt
         'vehicle',
         array(
             'labels'        => $brand_labels,
+            // 
             'hierarchical'  => true,
             'rewrite'       => array('slug' => 'brand'),
-            'show_in_rest'  => true,
+            // add column brand at list vehicle
             'show_admin_column' => true,
         )
     );
 
     // create series
     $series_labels = array(
-        'name'          => __('Series', 'twentytwentyfive'),
-        'singular_name' => __('Series', 'twentytwentyfive'),
+        'name'          => __('Series', 'bluehost-blueprint'),
+        'singular_name' => __('Series', 'bluehost-blueprint'),
     );
 
     register_taxonomy(
@@ -37,7 +43,6 @@ function register_vehicle_tax()
             'labels'        => $series_labels,
             'hierarchical'  => true,
             'rewrite'       => array('slug' => 'series'),
-            'show_in_rest'  => true,
             'show_admin_column' => true,
         )
     );
