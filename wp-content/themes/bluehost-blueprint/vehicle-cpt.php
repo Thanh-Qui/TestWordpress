@@ -34,5 +34,5 @@ function register_vehicle_cpt()
     register_post_type('vehicle', $args);
 }
 
-// hook init register taxonomy, fields
+// hook init register custom post type
 add_action('init', 'register_vehicle_cpt');

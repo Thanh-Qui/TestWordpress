@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "title": "Vibrant",
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "background",
+          "color": "#FFF7F0",
+          "name": "Background"
+        },
+        {
+          "slug": "primary",
+          "color": "#E4572E",
+          "name": "Primary"
+        },
+        {
+          "slug": "secondary",
+          "color": "#A05195",
+          "name": "Secondary"
+        },
+        {
+          "slug": "base",
+          "color": "#ffffff",
+          "name": "Base"
+        },
+        {
+          "slug": "heading",
+          "color": "#2D132C",
+          "name": "Heading"
+        },
+        {
+          "slug": "body-text",
+          "color": "#5D536B",
+          "name": "Body Text"
+        },
+        {
+          "slug": "tertiary-bg-color",
+          "color": "#FFECD1",
+          "name": "Tertiary Bg Color"
+        },
+        {
+          "slug": "border-color",
+          "color": "#E0C3FC",
+          "name": "Border Color"
+        },
+        {
+          "slug": "foreground",
+          "color": "#000000",
+          "name": "Foreground"
+        }
+      ]
+    }
+  }
+}
