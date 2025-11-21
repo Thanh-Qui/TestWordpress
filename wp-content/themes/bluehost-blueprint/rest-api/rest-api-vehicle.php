@@ -43,14 +43,7 @@ function vehicle_search_api(WP_REST_Request $request)
         'data'    => $results,
     ]);
 }
-add_action('rest_api_init', function () {
-    register_rest_route('vehicle/v1', '/search', [
-        'methos' => 'GET',
-        'callback' => 'vehicle_search_api',
-        // public api
-        'permission_callback' => '__return_true',
-    ]);
-});
+
 
 // register api filter by brand or series
 function vehicle_filter_api(WP_REST_Request $request)
@@ -61,7 +54,7 @@ function vehicle_filter_api(WP_REST_Request $request)
 
     $args = [
         'post_type' => 'vehicle',
-        'post_per_page' => 6,
+        'posts_per_page' => 6,
     ];
 
     // add info taxonomy brand
@@ -118,4 +111,11 @@ add_action('rest_api_init', function () {
         'callback' => 'vehicle_filter_api',
         'permission_callback' => '__return_true',
     ]);
+
+    register_rest_route('vehicle/v1', '/search', [
+        'methods' => 'GET',
+        'callback' => 'vehicle_search_api',
+        'permission_callback' => '__return_true',
+    ]);
+    
 });
