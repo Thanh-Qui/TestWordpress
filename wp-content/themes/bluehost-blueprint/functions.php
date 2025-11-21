@@ -26,6 +26,7 @@ require('vehicle-cpt.php');
 require('vehicle-func.php');
 require('vehicle-tax.php');
 require('vehicle-meta-box.php');
+require get_theme_file_path('rest-api/rest-api-vehicle.php');
 
 // create shortcode for list vehicle
 function vehicle_list_shortcode()
@@ -62,5 +63,6 @@ function my_custom_styles()
         'all',
     );
 }
-// wp_enqueue_scripts (hook) register and enquene file css and js
+// wp_enqueue_scripts (hook) register and enqueue file css and js
 add_action('wp_enqueue_scripts', 'my_custom_styles');
+

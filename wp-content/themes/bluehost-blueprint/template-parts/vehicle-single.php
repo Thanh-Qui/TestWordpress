@@ -1,7 +1,13 @@
 <?php
 
 // get slug to url
-$slug = sanitize_title($_GET['slug']);
+$slug = isset($_GET['slug']) ? sanitize_title($_GET['slug']) : '' ;
+
+// check exists data
+if (empty($slug)) {
+    echo '<p>No matching vehicle found</p>';
+    return;
+}
 
 // create args to display data
 $args = [
