@@ -1,0 +1,17 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-example-static {
+	background-color: rgb(160, 160, 253);
+	color: #fff;
+	padding: 5px;
+
+	h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+}

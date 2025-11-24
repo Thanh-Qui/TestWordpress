@@ -3,4 +3,4 @@ wp-content/debug.log
 .idea
 uploads
 /vendor/
-node_modules
+/node_modules

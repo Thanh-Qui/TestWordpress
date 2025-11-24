@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@wordpress/components": "^30.8.0"
+  }
+}
