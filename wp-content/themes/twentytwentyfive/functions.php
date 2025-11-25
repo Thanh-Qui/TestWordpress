@@ -158,4 +158,4 @@ if ( ! function_exists( 'twentytwentyfive_format_binding' ) ) :
 endif;
 
 // require('create-post-type.php');
-require('vehicle-cpt.php');
+// require('vehicle-cpt.php');

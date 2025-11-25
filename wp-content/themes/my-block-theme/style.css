@@ -1,0 +1,21 @@
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.vehicle-grid .wp-block-post-template {
+    display: contents; /* fix wrapper không cần thiết */
+}
+
+.vehicle-grid .wp-block-post {
+    display: flex;
+    flex-direction: column;
+}
+
+.vehicle-grid .wp-block-post-featured-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
