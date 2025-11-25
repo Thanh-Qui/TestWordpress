@@ -12,7 +12,7 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps, RichText, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, ColorPicker, RangeControl } from '@wordpress/components';
+import { PanelBody, ColorPicker, RangeControl, SelectControl } from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -31,9 +31,21 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 export default function Edit({ attributes, setAttributes }) {
-	const { title, backgroundColor, textColor, padding, fontSize } = attributes;
+    const { title, backgroundColor, textColor, padding, fontSize, fontFamily } = attributes;
 
-	return (
+    const fontOptions = [
+        { label: 'Arial', value: 'Arial, sans-serif' },
+        { label: 'Helvetica', value: 'Helvetica, sans-serif' },
+        { label: 'Georgia', value: 'Georgia, serif' },
+        { label: 'Times New Roman', value: '"Times New Roman", serif' },
+        { label: 'Courier New', value: '"Courier New", monospace' },
+        { label: 'Verdana', value: 'Verdana, sans-serif' },
+        { label: 'Trebuchet MS', value: '"Trebuchet MS", sans-serif' },
+        { label: 'Comic Sans MS', value: '"Comic Sans MS", cursive' },
+        { label: 'Impact', value: 'Impact, fantasy' },
+    ];
+
+    return (
         <>
             <InspectorControls>
                 <PanelBody title="Setting" initialOpen={true}>
@@ -61,23 +73,29 @@ export default function Edit({ attributes, setAttributes }) {
                         min={12}
                         max={72}
                     />
+                    <SelectControl
+                        label="Font Family"
+                        value={fontFamily}
+                        options={fontOptions}
+                        onChange={(value) => setAttributes({ fontFamily: value })}
+                    />
                 </PanelBody>
             </InspectorControls>
 
             <div
-                { ...useBlockProps({
+                {...useBlockProps({
                     style: {
                         backgroundColor,
                         color: textColor,
                         padding: `${padding}px`
                     }
-                }) }
+                })}
             >
                 <RichText
                     tagName="h2"
                     value={title}
                     onChange={(value) => setAttributes({ title: value })}
-                    style={{ fontSize: `${fontSize}px`, color: `${textColor}` }}
+                    style={{ fontSize: `${fontSize}px`, color: `${textColor}`, fontFamily: `${fontFamily}` }}
                     placeholder="Title..."
                 />
             </div>

@@ -16,19 +16,19 @@ import { RichText, useBlockProps } from '@wordpress/block-editor';
  * @return {Element} Element to render.
  */
 export default function save({ attributes }) {
-	const { title, description, backgroundColor, textColor, padding, fontSize } = attributes;
+    const { title, description, backgroundColor, textColor, padding, fontSize, fontFamily } = attributes;
 
-	return (
-		<div
-            { ...useBlockProps.save({
+    return (
+        <div
+            {...useBlockProps.save({
                 style: {
                     backgroundColor,
                     color: textColor,
                     padding: `${padding}px`
                 }
-            }) }
+            })}
         >
-            <RichText.Content tagName="h2" value={title} style={{ fontSize: `${fontSize}px`, color: `${textColor}` }} />
+            <RichText.Content tagName="h2" value={title} style={{ fontSize: `${fontSize}px`, color: `${textColor}`, fontFamily: `${fontFamily}` }} />
         </div>
-	);
+    );
 }

@@ -42,6 +42,10 @@
     "fontSize": {
       "type": "number",
       "default": 32
+    },
+    "fontFamily": {
+      "type": "string",
+      "default": "Arial, sans-serif"
     }
   }
 }
