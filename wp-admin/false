@@ -13,3 +13,21 @@
 [24-Nov-2025 09:03:52 UTC] PHP Fatal error:  Cannot redeclare register_vehicle_cpt() (previously declared in C:\laragon\www\project1\wp-content\plugins\vehicle-plugin\includes\vehicle-cpt.php:6) in C:\laragon\www\project1\wp-content\themes\twentytwentyfive\vehicle-cpt.php on line 6
 [24-Nov-2025 09:03:55 UTC] PHP Fatal error:  Cannot redeclare register_vehicle_cpt() (previously declared in C:\laragon\www\project1\wp-content\plugins\vehicle-plugin\includes\vehicle-cpt.php:6) in C:\laragon\www\project1\wp-content\themes\twentytwentyfive\vehicle-cpt.php on line 6
 [24-Nov-2025 09:04:17 UTC] PHP Fatal error:  Cannot redeclare register_vehicle_cpt() (previously declared in C:\laragon\www\project1\wp-content\plugins\vehicle-plugin\includes\vehicle-cpt.php:6) in C:\laragon\www\project1\wp-content\themes\twentytwentyfive\vehicle-cpt.php on line 6
+[25-Nov-2025 06:39:30 UTC] PHP Warning:  require(C:\laragon\www\project1/wp-content/themes/bluehost-blueprint./woocommerce/custom-my-account.php): Failed to open stream: Permission denied in C:\laragon\www\project1\wp-content\themes\bluehost-blueprint-child\functions.php on line 19
+[25-Nov-2025 06:39:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\laragon\www\project1/wp-content/themes/bluehost-blueprint./woocommerce/custom-my-account.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\project1\wp-content\themes\bluehost-blueprint-child\functions.php:19
+Stack trace:
+#0 C:\laragon\www\project1\wp-settings.php(695): include()
+#1 C:\laragon\www\project1\wp-config.php(123): require_once('C:\\laragon\\www\\...')
+#2 C:\laragon\www\project1\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#3 C:\laragon\www\project1\wp-admin\admin-ajax.php(22): require_once('C:\\laragon\\www\\...')
+#4 {main}
+  thrown in C:\laragon\www\project1\wp-content\themes\bluehost-blueprint-child\functions.php on line 19
+[25-Nov-2025 06:43:02 UTC] PHP Warning:  require(C:\laragon\www\project1/wp-content/themes/bluehost-blueprint/woocommerce/custom-my-account.php): Failed to open stream: No such file or directory in C:\laragon\www\project1\wp-content\themes\bluehost-blueprint-child\functions.php on line 19
+[25-Nov-2025 06:43:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\laragon\www\project1/wp-content/themes/bluehost-blueprint/woocommerce/custom-my-account.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\project1\wp-content\themes\bluehost-blueprint-child\functions.php:19
+Stack trace:
+#0 C:\laragon\www\project1\wp-settings.php(695): include()
+#1 C:\laragon\www\project1\wp-config.php(123): require_once('C:\\laragon\\www\\...')
+#2 C:\laragon\www\project1\wp-load.php(50): require_once('C:\\laragon\\www\\...')
+#3 C:\laragon\www\project1\wp-admin\admin-ajax.php(22): require_once('C:\\laragon\\www\\...')
+#4 {main}
+  thrown in C:\laragon\www\project1\wp-content\themes\bluehost-blueprint-child\functions.php on line 19

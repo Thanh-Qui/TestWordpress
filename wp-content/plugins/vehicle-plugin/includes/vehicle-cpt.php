@@ -5,7 +5,6 @@
 */
 function register_vehicle_cpt()
 {
-
     // label containing display information
     $labels = array(
         'name'               => __('Vehicles', 'bluehost-blueprint'),
