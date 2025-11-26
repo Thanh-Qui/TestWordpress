@@ -47,6 +47,10 @@ return array(
 			'fontSize' => array(
 				'type' => 'number',
 				'default' => 32
+			),
+			'fontFamily' => array(
+				'type' => 'string',
+				'default' => 'Arial, sans-serif'
 			)
 		)
 	)

@@ -16,14 +16,36 @@
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
 	"viewScript": "file:./view.js",
-	
 	"attributes": {
-    "title": { "type": "string", "source": "html", "selector": "h2" },
-    "description": { "type": "string", "source": "html", "selector": "p" },
-    "backgroundColor": { "type": "string", "default": "#ffffff" },
-    "textColor": { "type": "string", "default": "#000000" },
-    "padding": { "type": "number", "default": 40 },
-    "fontSize": { "type": "number", "default": 32 }
-}
-
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": "h2"
+		},
+		"description": {
+			"type": "string",
+			"source": "html",
+			"selector": "p"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"padding": {
+			"type": "number",
+			"default": 40
+		},
+		"fontSize": {
+			"type": "number",
+			"default": 32
+		},
+		"fontFamily": {
+			"type": "string",
+			"default": "Arial, sans-serif"
+		}
+	}
 }

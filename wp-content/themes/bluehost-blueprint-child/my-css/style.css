@@ -1,0 +1,278 @@
+/* ============================================
+    ORDERS TABLE
+   ============================================ */
+
+/* Container */
+.woocommerce-orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Header */
+.woocommerce-orders-table thead {
+    background: navy;
+}
+
+.woocommerce-orders-table thead tr {
+    display: table-row;
+}
+
+.woocommerce-orders-table__header {
+    padding: 16px 15px;
+    text-align: left;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.woocommerce-orders-table__header .nobr {
+    white-space: nowrap;
+}
+
+/* Body */
+.woocommerce-orders-table tbody {
+    display: table-row-group;
+}
+
+.woocommerce-orders-table__row {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+.woocommerce-orders-table__row:hover {
+    background-color: #f9f9f9;
+}
+
+.woocommerce-orders-table__row:last-child {
+    border-bottom: none;
+}
+
+.woocommerce-orders-table__cell {
+    padding: 14px 15px;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #333;
+}
+
+.woocommerce-orders-table__cell-order-number {
+    font-weight: 600;
+}
+
+.woocommerce-orders-table__cell-order-number a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.woocommerce-orders-table__cell-order-number a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Status badge */
+.woocommerce-orders-table__cell-order-status {
+    display: inline-block;
+}
+
+/* Status - pending */
+.woocommerce-orders-table__row--status-pending .woocommerce-orders-table__cell-order-status::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #ff9800;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Status - processing */
+.woocommerce-orders-table__row--status-processing .woocommerce-orders-table__cell-order-status::before {
+    width: 8px;
+    height: 8px;
+    background: green;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Status - completed */
+.woocommerce-orders-table__row--status-completed .woocommerce-orders-table__cell-order-status::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #4caf50;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Status - cancelled */
+.woocommerce-orders-table__row--status-cancelled .woocommerce-orders-table__cell-order-status::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #f44336;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* date column */
+.woocommerce-orders-table__cell-order-date {
+    color: #666;
+}
+
+/* total column */
+.woocommerce-orders-table__cell-order-total {
+    font-weight: 600;
+    color: #667eea;
+}
+
+/* actions column */
+.woocommerce-orders-table__cell-order-actions {
+    text-align: right;
+}
+
+/* Button actions */
+.woocommerce-orders-table__cell-order-actions .woocommerce-button,
+.woocommerce-orders-table__cell-order-actions .button {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #667eea;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 8px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.woocommerce-orders-table__cell-order-actions .woocommerce-button:hover,
+.woocommerce-orders-table__cell-order-actions .button:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* ============================
+   WOOCOMMERCE ORDER DETAILS UI
+   ============================ */
+
+.woocommerce-order-details {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid #eef0f5;
+}
+
+/* title */
+.woocommerce-order-details__title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 10px;
+}
+
+/* Table style */
+.woocommerce-table.order_details {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.woocommerce-table.order_details thead th {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    color: #6b7280;
+    border-bottom: 2px solid #e5e7eb;
+    padding: 12px 10px;
+}
+
+/* table product */
+.woocommerce-table.order_details tbody tr {
+    background: #f9fafb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.woocommerce-table.order_details tbody td,
+.woocommerce-table.order_details tbody th {
+    padding: 15px 12px;
+    vertical-align: middle;
+    border: none !important;
+    color: #1f2937;
+    font-size: 15px;
+}
+
+/* total amount */
+.woocommerce-table.order_details tfoot th {
+    background: none;
+    font-weight: 600;
+    color: #374151;
+    padding: 10px 5px;
+    border: none;
+}
+
+.woocommerce-table.order_details tfoot td {
+    text-align: right;
+    color: #111827;
+    font-weight: 600;
+    padding: 10px 5px;
+}
+
+/* Customer note */
+.woocommerce-table.order_details tfoot tr:last-child td {
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Action buttons */
+.order-actions-button,
+.woocommerce-button.button {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #2563eb;
+    color: #fff !important;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.order-actions-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Remove underline for links inside table */
+.woocommerce-table.order_details a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.woocommerce-table.order_details a:hover {
+    text-decoration: underline;
+}
+
+/* CUSTOMER DETAILS */
+.customer-style {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid #eef0f5;
+}

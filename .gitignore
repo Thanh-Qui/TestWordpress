@@ -4,3 +4,5 @@ wp-content/debug.log
 uploads
 /vendor/
 /node_modules
+wp-admin/false
+false

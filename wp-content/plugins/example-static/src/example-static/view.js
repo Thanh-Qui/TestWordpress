@@ -21,5 +21,5 @@
  */
 
 /* eslint-disable no-console */
-console.log( 'Hello World! (from create-block-example-static block)' );
+console.log( 'Hello Thanh Qui' );
 /* eslint-enable no-console */
